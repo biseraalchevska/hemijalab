@@ -1,0 +1,74 @@
+/* koristeno za experimenti i kvizovi */
+/*done ama ili stavi gi vo edno ili ubavo razdeli gi*/
+
+.page-experiments .section-header,
+.page-games .section-header{
+  margin-bottom: 24px;
+}
+
+.page-experiments .quiz-controls,
+.page-games .quiz-controls{
+  margin-bottom: 28px;
+}
+
+.page-experiments .quiz-grid,
+.page-gamesquiz .quiz-grid{
+  gap: 18px;
+}
+
+.page-experiments .quiz-card,
+.page-games .quiz-card{
+  position: relative;
+  border-left: 4px solid rgba(74,163,255,.35);
+  padding-left: 18px;
+}
+
+.page-experiments .quiz-card:hover,
+.page-games .quiz-card:hover{
+  border-left-color: rgba(74,163,255,.75);
+}
+
+.page-experiments .quiz-card h4,
+.page-games .quiz-card h4{
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.page-experiments .quiz-card p,
+.page-games .quiz-card p{
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+
+.page-experiments .chip,
+.page-gamesquiz .chip{
+  background: rgba(74,163,255,.18);
+  color: rgba(10,20,30,.9);
+}
+
+.page-experiments .badge,
+.page-games .badge{
+  background: rgba(10,20,30,.10);
+}
+
+
+.page-experiments .tab,
+.page-games .tab{
+  font-weight: 600;
+}
+
+.page-experiments .no-results,
+.page-games .no-results{
+  display: none;
+  text-align: center;
+  margin-top: 36px;
+  color: rgba(10,20,30,.6);
+  font-size: 15px;
+}
+
+@media (max-width: 900px){
+  .page-experiments .quiz-card,
+  .page-games .quiz-card{
+    padding-left: 16px;
+  }
+}

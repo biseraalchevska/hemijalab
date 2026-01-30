@@ -1,0 +1,143 @@
+<!--done first draft ama ima mn za rabota-->
+<!doctype html>
+<html lang="mk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Експерименти</title>
+
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./css/quiz.css" />
+  <link rel="stylesheet" href="./css/experiments.css" />
+
+  <script defer src="./script.js"></script>
+</head>
+
+<body class="page-experiments">
+  <!-- header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">⚛︎</span>
+        <span class="brand__name">Хемија</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Почетна</a>
+        <a href="quiz.html">Квизови</a>
+        <a href="experiments.html" aria-current="page">Експерименти</a>
+        <a href="games.html">Интерактивни игри</a>
+        <a href="contact.html">Контакт</a>
+      </nav>
+
+      <button class="burger" aria-label="Отвори мени" aria-expanded="false">
+        ☰
+      </button>
+    </div>
+
+    <div class="mobileNav" hidden>
+      <a href="index.html">Почетна</a>
+      <a href="quiz.html">Квизови</a>
+      <a href="experiments.html" aria-current="page">Експерименти</a>
+      <a href="games.html">Интерактивни игри</a>
+      <a href="contact.html">Контакт</a>
+    </div>
+  </header>
+
+  <main class="experiments">
+    <section class="section section--muted">
+      <div class="container">
+
+        <div class="section-header">
+          <h2>Експерименти</h2>
+          <p>Безбедни идеи, симулации и активности — пребарај по тема или тип.</p>
+        </div>
+
+        <div class="quiz-controls">
+          <input
+            id="expSearch"
+            class="quiz-search"
+            type="search"
+            placeholder="Пребарај експеримент (на пр. pH, раствори, реакции...)"
+            aria-label="Пребарај експерименти"
+          />
+
+          <div class="grade-tabs" role="tablist" aria-label="Филтер по тип">
+            <button class="tab is-active" data-filter="all" type="button" role="tab" aria-selected="true">
+              Сите
+            </button>
+            <!--napravi gi ovie logikata etc-->
+            <button class="tab" data-filter="sim" type="button" role="tab" aria-selected="false">
+              7 oddelenie
+            </button>
+            <button class="tab" data-filter="sim" type="button" role="tab" aria-selected="false">
+              8 oddelenie
+            </button>
+            <button class="tab" data-filter="sim" type="button" role="tab" aria-selected="false">
+              9 oddelenie
+            </button>
+          </div>
+        </div>
+
+        <div class="quiz-grid" id="expGrid">
+          <a class="quiz-card"
+             href="#"
+             data-title="Индикатори и pH"
+             data-tags="pH индикатори киселини бази лакмус"
+             data-type="class sim">
+            <div class="quiz-card__top">
+              <span class="chip">pH</span>
+              <span class="badge">7 oddelenie</span>
+            </div>
+            <h4>Индикатори и pH</h4>
+            <p>Objasnuvanje za eksperimentot.</p>
+          </a>
+
+          <a class="quiz-card"
+             href="#"
+             data-title="Филтрација"
+             data-tags="мешавини филтрација разделување филтер"
+             data-type="class home">
+            <div class="quiz-card__top">
+              <span class="chip">Разделување</span>
+              <span class="badge">8 oddelenie</span>
+            </div>
+            <h4>Филтрација</h4>
+            <p>Objasnuvanje za eksperimentot.</p>
+          </a>
+
+          <a class="quiz-card"
+             href="#"
+             data-title="Сода + оцет"
+             data-tags="реакции CO2 гас меурчиња"
+             data-type="home">
+            <div class="quiz-card__top">
+              <span class="chip">Реакции</span>
+              <span class="badge">9 oddelenie</span>
+            </div>
+            <h4>Сода + оцет</h4>
+            <p>Objasnuvanje za eksperimentot.</p>
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark">⚛︎</span>
+        <span class="brand__name">Хемија</span>
+      </div>
+
+      <div class="footer__links">
+        <a href="contact.html">Контакт</a>
+      </div>
+
+      <div class="footer__copy">© <span id="year"></span> Хемија</div>
+    </div>
+  </footer>
+</body>
+</html>

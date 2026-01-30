@@ -1,0 +1,322 @@
+
+   .page-games .balance-game {
+    background: transparent;
+    padding: 0;
+  }
+  
+  .page-games .card {
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+  }
+
+    
+  .page-games main {
+    padding-bottom: 80px;
+  }
+
+/* naslov */
+  .page-games h1,
+  .page-games .game-title {
+    text-align: center;
+  }
+  
+  .page-games .game-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 32px;
+  }
+  
+   .page-games #container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 32px;
+    align-items: start;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px; 
+  }
+  
+  .page-games #sidebar {
+    background: white;
+    border-radius: 0;
+    padding: 18px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* iskoristeno od drugiot css zatoa se takvi iminjata - ravenki ne atomi */
+  
+  .page-games #sidebar .atom-card {
+    background: transparent;
+    padding: 0;
+    border: none;
+  }
+  
+  .page-games #sidebar .atom-card-title {
+    margin: 0 0 14px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .page-games #reaction-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .page-games #reaction-list li {
+    padding: 10px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .page-games #reaction-list li:hover {
+    background: #f2f5fa;
+  }
+  
+  .page-games #reaction-list li.active {
+    background: #e9f0ff;
+    font-weight: 600;
+  }
+  
+  /* isto - ova e za kopceto */
+  
+  .page-games #sidebar .bond-controls {
+    margin-top: auto; 
+    display: flex;
+    justify-content: center;
+  }
+  
+  .page-games #sidebar .bond-controls button {
+    width: auto;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .page-games .balance-check-btn {
+    width: 100%;
+    max-width: 420px;
+  
+    background: #f3f4f6;
+    color: #111827;
+  
+    border: 2px solid #111827;
+    border-radius: 6px;
+  
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 700;
+  
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+  }
+  
+  .page-games .balance-check-btn:hover {
+    background: #e5e7eb;
+  }
+  
+  .page-games .balance-check-btn:active {
+    transform: translateY(1px);
+  }
+
+
+  /* single container on teh right */
+  .page-games .balance-workspace {
+    background: white;
+    border-radius: 0;
+    padding: 28px 32px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* prethodno sledno */
+  
+  .page-games #reaction-nav {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .page-games #reaction-nav button {
+    padding: 6px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .page-games #reaction-nav button:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+  
+  .page-games #reaction-label {
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  
+  /* bar za ravenki */
+  
+  .page-games #equation-bar {
+    background: #f6f8fb;
+    border-radius: 5px;
+    padding: 16px 18px;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .page-games .operator {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 6px;
+  }
+  
+  /* koeficienti */
+  
+  .page-games .molecule-control {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .page-games .coefficient {
+    font-size: 22px;
+    font-weight: 800;
+  }
+  
+  .page-games .control-buttons {
+    display: flex;
+    gap: 6px;
+    margin-top: 4px;
+  }
+  
+  .page-games .control-buttons button {
+    padding: 4px 8px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: white;
+    cursor: pointer;
+  }
+  
+  /* reaktanti/produkti */
+  
+  .page-games #molecule-area {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+  }
+  
+  .page-games .box {
+    background: transparent;
+    border: none;
+    padding: 0;
+    padding-top: 8px;
+  }
+  
+  .page-games .box h3 {
+    margin: 0 0 8px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  
+  /*  molekuli */
+  
+  .page-games .molecule {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin: 6px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 1px dashed rgba(10, 20, 30, 0.25);
+  }
+  
+  /*  atomi  */
+  
+  .page-games .atom {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+    color: #111;
+    border: 1px solid rgba(0,0,0,.25);
+  }
+  
+  
+  .page-games .atom.H { background: #4aa3ff; }
+  .page-games .atom.O { background: #ff6b6b; }
+  .page-games .atom.C { background: #555; }
+    
+  .page-games #scales {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;   
+    gap: 16px;
+  
+    width: 100%;
+    margin-top: 24px;
+  }
+  
+  /* .page-games .scale {
+    background: #f6f8fb;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+  } */
+
+  .page-games .scale {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    padding: 4px;
+    border-radius: 5px;
+  
+    text-align: center;
+    background: #f6f8fb;
+    border: 1px solid var(--border);
+  }
+  
+  .page-games .scale strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+  
+  .page-games .scale.balanced {
+    border-color: #3bb273;
+    background: #ecf8f1;
+  }
+  
+  /* feedback */
+  
+  .page-games #feedback {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+

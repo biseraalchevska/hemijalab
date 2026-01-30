@@ -1,0 +1,12 @@
+<svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg" aria-label="H2O molecule" role="img">
+  <!-- vrski -->
+  <line x1="150" y1="110" x2="90" y2="160" stroke="rgba(255,255,255,0.7)" stroke-width="6"></line>
+  <line x1="150" y1="110" x2="210" y2="160" stroke="rgba(255,255,255,0.7)" stroke-width="6"></line>
+
+  <!-- kislorod -->
+  <circle cx="150" cy="110" r="30" fill="#4fa3ff"></circle>
+
+  <!-- vodorod -->
+  <circle cx="90" cy="160" r="18" fill="#ffffff"></circle>
+  <circle cx="210" cy="160" r="18" fill="#ffffff"></circle>
+</svg>

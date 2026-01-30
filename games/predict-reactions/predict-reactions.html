@@ -1,0 +1,147 @@
+<!--done-->
+<!doctype html>
+<html lang="mk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Предвидување хемиски реакции</title>
+
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../css/quiz.css">
+  <link rel="stylesheet" href="../../css/experiments.css">
+
+  <link rel="stylesheet" href="./predict-reactions.css">
+
+  <script defer src="../../script.js"></script>
+  <script defer src="./predict-reactions.js"></script>
+</head>
+
+<body class="page-games">
+
+  <!-- header od spelling -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="../../index.html">
+        <span class="brand__mark">⚛︎</span>
+        <span class="brand__name">ХемијаЛаб</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="../../index.html">Почетна</a>
+<!--    <a href="quiz.html">Квизови</a> -->
+<!--    <a href="experiments.html">Експерименти</a> -->
+        <a href="../../games.html">Интерактивни игри</a>
+        <a href="../../contact.html">Контакт</a>
+      </nav>
+
+      <button class="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+
+    <div class="mobileNav" hidden>
+      <a href="../../index.html">Почетна</a>
+<!--    <a href="quiz.html">Квизови</a> -->
+<!--    <a href="experiments.html">Експерименти</a> -->
+      <a href="../../games.html">Интерактивни игри</a>
+      <a href="../../contact.html">Контакт</a>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section class="predictor-game">
+      <h1 class="title">Предвидување хемиски реакции</h1>
+
+      <div id="layout">
+        <div id="container">
+
+          <!-- reakciite na strana -->
+          <aside id="sidebar">
+            <div class="prediction-card">
+              <h2>Реакции</h2>
+              <div id="reactionList"></div>
+            </div>
+          </aside>
+
+          <section class="predict-workspace">
+
+            <div id="reaction-area">
+              <div class="reaction-row">
+
+                <div class="predict-card reactant-a" id="reactantA">
+                  <div class="formula"></div>
+                  <div class="name"></div>
+                </div>
+
+                <div class="plus">+</div>
+
+                <div class="predict-card reactant-b" id="reactantB">
+                  <div class="formula"></div>
+                  <div class="name"></div>
+                </div>
+
+                <div class="predict-card product-card" id="productCard">
+                  <div class="formula"></div>
+                  <div class="name"></div>
+                </div>
+
+              </div>
+            </div>
+
+            <div id="quiz-area">
+
+              <!-- 1 prasanje -->
+              <div class="predict-quiz active" data-step="0">
+                <h3>Дали има реакција помеѓу овие два елементи?</h3>
+                <button class="predict-answer" data-value="yes">Да</button>
+                <button class="predict-answer" data-value="no">Не</button>
+              </div>
+
+              <!-- 2 рrasanje -->
+              <div class="predict-quiz" data-step="1">
+                <h3>Доколку има реакција, кои се продуктите?</h3>
+                <div id="productOptions"></div>
+              </div>
+
+              <!-- 3 prasanje -->
+              <div class="predict-quiz" data-step="2">
+                <h3>Кој е типот на оваа реакција?</h3>
+                <div id="reactionTypeOptions"></div>
+                <button id="submitPrediction" disabled>Потврди</button>
+              </div>
+
+            </div>
+
+            <!-- резултати -->
+            <div id="explanation"></div>
+            <div id="balanced"></div>
+            <div id="student-results"></div>
+
+            <button id="restartBtn" style="display:none;">
+              Пробај повторно
+            </button>
+
+          </section>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark">⚛︎</span>
+        <span class="brand__name">Хемија</span>
+      </div>
+      <div class="footer__links">
+        <a href="../../contact.html">Контакт</a>
+      </div>
+      <div class="footer__copy">
+        © <span id="year"></span> Хемија
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

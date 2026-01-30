@@ -1,0 +1,164 @@
+<!--done!-->
+<!doctype html>
+<html lang="mk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Интерактивни игри</title>
+  <link rel="stylesheet" href="./styles.css" />
+
+  <link rel="stylesheet" href="./css/quiz.css" />
+
+  <link rel="stylesheet" href="./css/experiments.css" />
+
+  <script defer src="./script.js"></script>
+</head>
+
+<body class="page-games">
+  <!-- header od index-->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#">
+        <span class="brand__mark">⚛︎</span>
+        <span class="brand__name">ХемијаЛаб</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Почетна</a>
+<!--    <a href="quiz.html">Квизови</a> -->
+<!--    <a href="experiments.html">Експерименти</a> -->
+        <a href="games.html">Интерактивни игри</a>
+        <a href="contact.html">Контакт</a>
+      </nav>
+
+      <button class="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+
+    <div class="mobileNav" hidden>
+      <a href="index.html">Почетна</a>
+<!--    <a href="quiz.html">Квизови</a> -->
+<!--    <a href="experiments.html">Експерименти</a> -->
+      <a href="games.html">Интерактивни игри</a>
+      <a href="contact.html">Контакт</a>
+    </div>
+  </header>
+
+  <main class="experiments games">
+    <section class="section section--muted">
+      <div class="container">
+  
+        <!-- naslov -->
+        <div class="section-header">
+          <h2>Интерактивни игри</h2>
+          <p>Преку овие интерактивни игри, учениците можат визуелно и самостојно да ја истражуваат хемијата. Игрите се поделени во почетно, средно и напредно ниво.</p>
+        </div>
+  
+        <div class="quiz-controls">
+          <input
+            id="gameSearch"
+            class="quiz-search"
+            type="search"
+            placeholder="Пребарај игра (елементи, молекули, реакции...)"
+            aria-label="Пребарај игри"
+          />
+  
+          <div class="grade-tabs" role="tablist" aria-label="Филтер по тема">
+            <button class="tab is-active" data-filter="all" type="button" role="tab" aria-selected="true">
+              Сите
+            </button>
+            <button class="tab" data-filter="atoms" type="button" role="tab" aria-selected="false">
+              Атоми
+            </button>
+            <button class="tab" data-filter="molecules" type="button" role="tab" aria-selected="false">
+              Молекули
+            </button>
+            <button class="tab" data-filter="reactions" type="button" role="tab" aria-selected="false">
+              Реакции
+            </button>
+          </div>
+        </div>
+  
+        <div class="quiz-grid" id="gamesGrid">
+  
+          <a class="quiz-card"
+             href="games/spelling-elements/spelling-elements.html"
+             data-title="Спелување со елементи"
+             data-tags="елементи симболи периоден систем"
+             data-type="atoms">
+  
+            <div class="quiz-card__top">
+              <span class="chip">Атоми</span>
+              <span class="badge">Почетно ниво</span>
+            </div>
+  
+            <h4>Спелување со елементи</h4>
+            <p>Составувај зборови користејќи симболи од периодниот систем.</p>
+          </a>
+  
+          <a class="quiz-card"
+             href="games/molecule-builder/molecule-builder.html"
+             data-title="Градење молекули"
+             data-tags="молекули врски валентност"
+             data-type="molecules">
+  
+            <div class="quiz-card__top">
+              <span class="chip">Молекули</span>
+              <span class="badge">Средно ниво</span>
+            </div>
+  
+            <h4>Градење молекули</h4>
+            <p>Поврзи ги атомите за да создадеш молекули.</p>
+          </a>
+  
+          <a class="quiz-card"
+             href="games/balance-equations/balance-equations.html"
+             data-title="Балансирање равенки"
+             data-tags="равенки реакции атоми"
+             data-type="reactions ">
+  
+            <div class="quiz-card__top">
+              <span class="chip">Реакции</span>
+              <span class="badge">Средно ниво</span>
+            </div>
+  
+            <h4>Израмнување равенки</h4>
+            <p>Израмни ги хемиските равенки со користење на коефициенти.</p>
+          </a>
+  
+          <a class="quiz-card"
+             href="games/predict-reactions/predict-reactions.html"
+             data-title="Предвидување реакции"
+             data-tags="реакции предвидување модели"
+             data-type="reactions ">
+  
+            <div class="quiz-card__top">
+              <span class="chip">Логика</span>
+              <span class="badge">Напредно ниво</span>
+            </div>
+  
+            <h4>Предвидување хемиски реакции</h4>
+            <p>Размисли што ќе се случи пред да ја видиш реакцијата.</p>
+          </a>
+  
+        </div>
+      </div>
+    </section>
+  </main>
+  
+
+
+  <!-- footer od index -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark">⚛︎</span>
+        <span class="brand__name">ХемијаЛаб</span>
+      </div>
+      <div class="footer__links">
+        <a href="#">Контакт</a>
+      </div>
+      <div class="footer__copy">© <span id="year"></span> АлчевЛабс</div>
+    </div>
+  </footer>
+</body>
+</html>

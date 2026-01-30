@@ -1,0 +1,124 @@
+  <!--done first draft-->
+<!doctype html>
+<html lang="mk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Квизови | Хемија</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./css/quiz.css" />
+
+  <script defer src="./script.js"></script>
+  <script defer src="./quiz.js"></script>
+
+</head>
+
+<body class="page-quiz">
+  <!-- header tuka smeni treba da ima nekoi izmeni-->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#">
+        <span class="brand__mark">⚛︎</span>
+        <span class="brand__name">Хемија</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Почетна</a>
+        <a href="quiz.html">Квизови</a>
+        <a href="experiments.html">Експерименти</a>
+        <a href="games.html">Интерактивни игри</a>
+        <a href="contact.html">Контакт</a>
+
+      </nav>
+
+      <button class="burger" aria-label="Open menu" aria-expanded="false">
+        ☰
+      </button>
+    </div>
+
+</div>
+
+<div class="mobileNav" hidden>
+  <a href="index.html">Почетна</a>
+  <a href="quiz.html">Квизови</a>
+  <a href="experiments.html">Експерименти</a>
+  <a href="games.html">Интерактивни игри</a>
+    <a href="contact.html">Контакт</a>
+</div>
+  </header>
+
+  <main>
+    <section class="section section--muted">
+      <div class="container">
+        <div class="section-header">
+          <h2>Квизови</h2>
+          <p>Пребарај по тема или филтрирај по одделение.</p>
+        </div>
+  
+        <div class="quiz-controls">
+          <input
+            id="quizSearch"
+            class="quiz-search"
+            type="search"
+            placeholder="Побарај квиз:"
+          />
+  
+          <div class="grade-tabs">
+            <button class="tab is-active" data-grade="all">Сите</button>
+            <button class="tab" data-grade="7">7 одд.</button>
+            <button class="tab" data-grade="8">8 одд.</button>
+            <button class="tab" data-grade="9">9 одд.</button>
+          </div>
+        </div>
+  
+        <!-- 7 -->
+        <section class="grade-section" data-grade-section="7">
+          <div class="grade-header">
+            <h3>7 Одделение</h3>
+            <span class="grade-count" data-count="7"></span>
+          </div>
+          <div class="quiz-grid"></div>
+        </section>
+  
+        <hr class="grade-divider" />
+  
+        <!-- 8 -->
+        <section class="grade-section" data-grade-section="8">
+          <div class="grade-header">
+            <h3>8 Одделение</h3>
+            <span class="grade-count" data-count="8"></span>
+          </div>
+          <div class="quiz-grid"></div>
+        </section>
+  
+        <hr class="grade-divider" />
+  
+        <!-- 9 Одделение-->
+        <section class="grade-section" data-grade-section="9">
+          <div class="grade-header">
+            <h3>9 Одделение</h3>
+            <span class="grade-count" data-count="9"></span>
+          </div>
+          <div class="quiz-grid"></div>
+        </section>
+  
+      </div>
+    </section>
+  </main>
+  
+  
+  <!-- footer i tuka smeni  -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark">⚛︎</span>
+        <span class="brand__name">Хемија</span>
+      </div>
+      <div class="footer__links">
+        <a href="contact.html">Контакт</a>
+      </div>
+      <div class="footer__copy">© <span id="year"></span> Хемија</div>
+    </div>
+  </footer>
+</body>
+</html>

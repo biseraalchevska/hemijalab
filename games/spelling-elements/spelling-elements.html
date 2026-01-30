@@ -1,0 +1,186 @@
+<!--done-->
+<!doctype html>
+<html lang="mk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Спелување со хемиски симболи</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../css/quiz.css">
+  <link rel="stylesheet" href="../../css/experiments.css">
+  <link rel="stylesheet" href="./spelling-elements.css">
+  <script defer src="../../script.js"></script>
+  <script defer src="./spelling-elements.js"></script>
+</head>
+
+<body class="page-games">
+
+  <!-- nov header od spelling -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="../../index.html">
+        <span class="brand__mark">⚛︎</span>
+        <span class="brand__name">ХемијаЛаб</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="../../index.html">Почетна</a>
+<!--    <a href="quiz.html">Квизови</a> -->
+<!--    <a href="experiments.html">Експерименти</a> -->
+        <a href="../../games.html">Интерактивни игри</a>
+        <a href="../../contact.html">Контакт</a>
+      </nav>
+
+      <button class="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+
+    <div class="mobileNav" hidden>
+      <a href="../../index.html">Почетна</a>
+<!--    <a href="quiz.html">Квизови</a> -->
+<!--    <a href="experiments.html">Експерименти</a> -->
+      <a href="../../games.html">Интерактивни игри</a>
+      <a href="../../contact.html">Контакт</a>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main class="main game-page">
+    <h1 class="page-title">Спелување со хемиски симболи</h1>
+
+    <div class="spelling-elements">
+  
+    <!-- perioden sistem -->
+    <section class="pt-section" aria-label="Periodic table">
+      <div class="pt-wrap">
+        <div class="pt-classic">
+
+          <!-- glaven del -->
+          <div
+            id="periodicMain"
+            class="periodic-main"
+            aria-label="Main periodic table"
+          ></div>
+
+          <!-- f blok -->
+          <div class="fblock-wrap" aria-label="Lanthanides and actinides">
+            <div id="periodicF" class="periodic-f">
+
+              <!-- joker -->
+              <div
+                id="jokerTile"
+                class="element-tile joker-tile"
+                data-symbol="__JOKER__"
+              >
+                <div class="tile-top">
+                  <div class="symbol">?</div>
+                  <div class="atomic-number">★</div>
+                </div>
+                <div class="name">Џокер</div>
+              </div>
+
+            </div>
+
+      </div>
+    </section>
+
+    <!-- играта -->
+    <section class="spellinggame card">
+
+      <header class="card-header">
+        <div>
+          <h2>Кој збор ќе го спелуваш?</h2>
+          <p class="muted">
+            Напиши збор (на латиница), потврди го, па пробај да го спелуваш користејќи ги хемиските симболи. Доколку зборот не може да се спелува само со симболите, искористи го џокерот! 
+          </p>
+        </div>
+
+
+      </header>
+
+      <div class="word-input-area">
+        <div class="word-label">ТВОЈОТ ЗБОР</div>
+      
+        <input
+          id="wordInput"
+          type="text"
+          class="word-input"
+          placeholder="Напиши збор"
+          maxlength="20"
+        />
+      
+        <div class="word-actions">
+          <button id="lockBtn">Потврди</button>
+          <button id="resetBtn" class="secondary">Почни од почеток</button>
+        </div>
+      </div>
+      
+
+      <div class="divider"></div>
+
+      <section class="build-area">
+        <h3>Започни со спелување</h3>
+        <p class="muted small">
+          Притисни на самиот хемиски симбол за да го додадеш. Доколку го погрешиш редоследот, можеш да ги смениш симболите. Само повлечи го симболот во насоката каде што сакаш да го ставиш. Ако сакаш да избришеш симбол, притисни на ✕. Дококлу сакаш да промениш еден хемиски симбол со друг, притисни на копчето за променување на симболи!
+        </p>
+
+        <div class="builder">
+          <div class="builder-row">
+            <div class="builder-label">До каде сум со зборот?</div>
+            <div id="progressWord" class="progress-word">—</div>
+          </div>
+
+          <div class="builder-row">
+            <div class="builder-label">Моите симболи</div>
+            <div
+              id="buildZone"
+              class="build-zone"
+              aria-label="Build zone"
+            >
+              <span class="muted small">Кога ќе притиснеш на симболот, тој ќе се појави тука!</span>
+            </div>
+          </div>
+
+          <div class="builder-row">
+            <div class="builder-label">Џокери</div>
+            <div id="jokerCount" class="joker-count">0</div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="switchBtn" class="secondary" disabled>Промени симбол</button>
+          <button id="checkBtn" disabled>Провери го твојот резултат</button>
+          <button id="hintBtn" class="secondary" disabled>Помош</button>
+        </div>
+
+        <div
+          id="result"
+          class="result"
+          role="status"
+          aria-live="polite"
+        ></div>
+      </section>
+
+    </section>
+  </div>
+  </main>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark">⚛︎</span>
+        <span class="brand__name">Хемија</span>
+      </div>
+
+      <div class="footer__links">
+        <a href="../../contact.html">Контакт</a>
+      </div>
+
+      <div class="footer__copy">
+        © <span id="year"></span> Хемија
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

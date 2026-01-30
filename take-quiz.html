@@ -1,0 +1,56 @@
+  <!-- done ama ima za rabota tuka hahah -->
+<!doctype html>
+<html lang="mk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Квиз | Хемија</title>
+
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./css/quiz.css" />
+
+  <script defer src="./script.js"></script>
+  <script defer src="./js/quiz-engine.js"></script>
+</head>
+
+<body class="page-take-quiz">
+
+  <!-- header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html">
+        <span class="brand__mark">⚛︎</span>
+        <span class="brand__name">Хемија</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main>
+    <section class="section">
+      <div class="container quiz-player">
+
+        <h1 id="quizTitle">Вчитување...</h1>
+
+        <div class="quiz-top-nav">
+          <button id="prevBtn" disabled>← Претходно</button>
+          <span id="progress"></span>
+          <button id="nextBtn">Следно →</button>
+        </div>
+
+        <div class="quiz-question" id="questionText"></div>
+
+        <div class="quiz-answers" id="answers"></div>
+
+        <div class="quiz-question-bar" id="questionBar"></div>
+
+        <div class="quiz-finish">
+            <button id="finishBtn" hidden>Заврши со квизот!</button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

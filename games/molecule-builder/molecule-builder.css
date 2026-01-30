@@ -1,0 +1,227 @@
+/* .page-games .molecule-builder-page * {
+  box-sizing: border-box;
+} */
+.page-games .molecule-builder-page .game-title,
+.page-games .molecule-builder-page .game-intro {
+  text-align: center;
+}
+
+.page-games .molecule-builder-page {
+  padding-bottom: 14px;   
+  min-height: auto;       
+}
+
+/* naslov */
+.page-games .molecule-builder-page .game-title {
+  max-width: 1100px;
+  margin: 32px auto 8px;
+
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #1f2937;
+}
+
+.page-games .molecule-builder-page .game-intro {
+  max-width: 1100px;
+  margin: 0 auto 28px;
+
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+/* glaven del*/
+.page-games .molecule-builder-page #container {
+  max-width: 1100px;
+  margin: 0 auto 48px;
+
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  column-gap: 24px;
+  row-gap: 12px;
+}
+
+/* stranicno*/
+
+.page-games .molecule-builder-page #sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* atom */
+
+.page-games .molecule-builder-page .atom-card {
+  background: #ffffff;
+  border: 1px solid rgba(10,20,30,.12);
+  padding: 16px;
+}
+
+.page-games .molecule-builder-page .atom-card-title {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* p atomi*/
+
+.page-games .molecule-builder-page .atoms-palette {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
+  gap: 10px;
+}
+
+.page-games .molecule-builder-page .atom {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: system-ui, sans-serif;
+
+  cursor: grab;
+  user-select: none;
+
+  border: 2px solid rgba(0,0,0,.15);
+}
+
+.page-games .molecule-builder-page .atom:hover {
+  outline: 2px solid rgba(47,111,255,.35);
+}
+
+/* vrskite */
+
+.page-games .molecule-builder-page .bond-controls {
+  background: #ffffff;
+  border: 1px solid rgba(10,20,30,.12);
+  padding: 16px;
+}
+
+.page-games .molecule-builder-page .bond-controls h2 {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.page-games .molecule-builder-page .bond-controls button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  border-radius: 0;
+  border: 1px solid rgba(10,20,30,.18);
+  background: #f9fafb;
+  cursor: pointer;
+}
+
+.page-games .molecule-builder-page .bond-controls button:hover {
+  background: #eef2ff;
+}
+
+.page-games .molecule-builder-page .active-bond-btn {
+  background: rgba(47,111,255,.12);
+  border-color: rgba(47,111,255,.45);
+}
+
+/* povleci gi atomite tuka */
+
+.page-games .molecule-builder-page #workspace {
+  position: relative;
+  min-height: 460px;
+  height: auto;
+
+  background: #ffffff;
+  border: 2px dashed rgba(10,20,30,.18);
+  margin-bottom: 12px;
+}
+
+.page-games .molecule-builder-page .workspace-hint {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+/* povleceni atomi */
+
+.page-games .molecule-builder-page .placed-atom {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: system-ui, sans-serif;
+
+  border: 3px solid rgba(0,0,0,.65);
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* vrski pomegju atomite*/
+
+.page-games .molecule-builder-page .bond-line {
+  position: absolute;
+  height: 4px;
+  background: #1f2937;
+  transform-origin: left center;
+  z-index: 1;
+}
+
+/* rezultati (podigni go malce) */
+
+.page-games .molecule-builder-page .result-bar {
+  margin: 12px auto 16px;  max-width: 1100px;
+  padding: 16px 20px;
+
+  border-radius: 0;
+  border: 1px solid rgba(10,20,30,.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-games .molecule-builder-page .result-bar p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.page-games .molecule-builder-page .result-bar.good {
+  background: rgba(34,197,94,.12);
+  border-color: rgba(34,197,94,.45);
+}
+
+.page-games .molecule-builder-page .result-bar.bad {
+  background: rgba(239,68,68,.12);
+  border-color: rgba(239,68,68,.45);
+}
+
+.page-games .molecule-builder-page .result-bar.partial {
+  background: rgba(59,130,246,.12);
+  border-color: rgba(59,130,246,.45);
+}
+
+.page-games .molecule-builder-page .result-bar button {
+  padding: 8px 14px;
+  font-weight: 600;
+  border: 1px solid rgba(10,20,30,.25);
+  background: white;
+  cursor: pointer;
+}
+
+

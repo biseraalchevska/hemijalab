@@ -1,0 +1,188 @@
+<!-- done -->
+<!doctype html>
+<html lang="mk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ХемијаЛаб – Интерактивно учење</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="page-landing">
+
+  <!-- header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#">
+        <span class="brand__mark">⚛︎</span>
+        <span class="brand__name">ХемијаЛаб</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Почетна</a>
+<!--    <a href="quiz.html">Квизови</a> -->
+<!--    <a href="experiments.html">Експерименти</a> -->
+        <a href="games.html">Интерактивни игри</a>
+        <a href="contact.html">Контакт</a>
+      </nav>
+
+      <button class="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+
+    <div class="mobileNav" hidden>
+      <a href="index.html">Почетна</a>
+<!--    <a href="quiz.html">Квизови</a> -->
+<!--    <a href="experiments.html">Експерименти</a> -->
+      <a href="games.html">Интерактивни игри</a>
+      <a href="contact.html">Контакт</a>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main>
+
+    <!-- херо -->
+    <section class="hero" id="start">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <h1>ХемијаЛаб: дигитална платформа за основно образование</h1>
+          <p>
+            Платформа наменета за ученици и наставници, со интерактивни игри,
+            визуелизации и материјали за поддршка на наставата по хемија.
+          </p>
+          
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#igri">Започни да истражуваш!</a>
+<!--            <button class="btn btn--ghost" id="openVideo">
+              ▶ Погледни како работи
+            </button> -->
+          </div>
+        </div>
+
+        <div class="hero__media">
+          <div class="mockup hero__visual">
+            <div id="molecule-canvas" aria-hidden="true"></div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- sto mozam da najdam -->
+    <section class="section" id="igri">
+      <div class="container">
+    
+        <div class="section-header reveal">
+          <h2>Што можам да најдам на овој портал?</h2>
+        </div>
+    
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card__top">
+              <div class="card__icon">
+                <img src="assets/quiz.png" alt="Квизови">
+              </div>
+              <h3>Квизови</h3>
+            </div>
+            <p>  Квизови за проверка на знаењето на учениците, поделени по нивоа, во зависност од одделението во кое се предава материјалот.
+              Учениците можат самостојно да изберат квиз, да одговараат на прашањата и на крај
+              да добијат повратна информација со освоената оценка, како и преглед на точните и неточните одговори.</p>
+          </article>
+    
+          <article class="card reveal">
+            <div class="card__top">
+              <div class="card__icon">
+                <img src="assets/experiment.png" alt="Експерименти">
+              </div>
+              <h3>Експерименти</h3>
+            </div>
+            <p>  Хемиските реакции и промени полесно се разбираат кога можат визуелно да се прикажат.
+              Тука учениците можат да следат симулации на хемиски експерименти и да ги набљудуваат
+              процесите и реакциите со цел полесно совладување на материјалот.
+              Секој експеримент е проследен со објаснување на чекорите и резултатите.</p>
+          </article>
+    
+          <article class="card reveal">
+            <div class="card__top">
+              <div class="card__icon">
+                <img src="assets/games.png" alt="Игри">
+              </div>
+              <h3>Интерактивни игри</h3>
+            </div>
+            <p>  Интерактивни игри со едукативен карактер кои им помагаат на учениците
+              полесно да ги поврзат и применат хемиските поими.
+              Преку решавање задачи и користење интерактивни симулации,
+              учениците се здобиваат со подобро разбирање на материјалот.</p>
+          </article>
+    
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- kako funcionira -->
+    <section class="section section--muted">
+      <div class="container">
+        <h2 class="section__title">Како да започнам со користење на оваа платформа?</h2>
+
+        <div class="steps">
+          <div class="step">
+            <h4>1. Одбери активност</h4>
+            <p>На оваа платформа можеш да започнеш од било каде. Доколку сакаш да вежбаш теорија, пробај ги квизовите! Ако пак сакаш визуелно да си претставиш некој експеримент што бил спомнат на часовите, можеш да провериш дали го има во делот за екперименти на платформата. </p>
+          </div>
+
+          <div class="step">
+            <h4>2. Одбери ниво</h4>
+            <p>Квизовите, експериментите, па дури и интерактивните игри се поделени на различни нивоа. Ќе можеш да го одбереш твоето одделение и да решаваш задачи што се наменети токму за тебе! Доколку сакаш да истражуваш, можеш да ги разгледаш и прашањата за повисоките одделенија, но не мораш да ги одговараш!</p>
+          </div>
+
+          <div class="step">
+            <h4>3. Продлабочи го своето знаење</h4>
+            <p>На крајот на квизовите и игрите ќе добиеш повратна информација, кои одговори ти биле точни, а кои грешни! Никој друг не може да го види твојот резултат. Оваа платформа не е наменета за оценување, туку за продлабочување на знаењето и учење од своите грешки. </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПРОБАЈТЕ САМИ 
+    <section class="section">
+      <div class="container split">
+        <div>
+          <h2>Пробајте сами!</h2>
+          <p>Создавајте молекули и гледајте како се „склопува“ хемијата.</p>
+          <a class="btn btn--primary" href="games.html">Отвори алатка</a>
+        </div>
+
+        <div class="preview">
+          <img src="assets/mockup-2.png" alt="Преглед на алатката" />
+        </div>
+      </div>
+    </section> 
+    -->
+
+
+  </main>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark">⚛︎</span>
+        <span class="brand__name">ХемијаЛаб</span>
+      </div>
+      <div class="footer__links">
+        <a href="#">Контакт</a>
+      </div>
+      <div class="footer__copy">© <span id="year"></span> АлчевЛабс</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="js/scroll-reveal.js"></script>
+
+  <script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+  <script src="js/molecule-hero.js"></script>
+  
+</body>
+</html>

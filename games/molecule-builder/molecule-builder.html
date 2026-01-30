@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="mk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Градиме молекули | Хемија</title>
+
+  <!-- Global site styles -->
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../css/quiz.css">
+  <link rel="stylesheet" href="../../css/experiments.css">
+
+  <!-- Game styles -->
+  <link rel="stylesheet" href="./molecule-builder.css">
+
+  <!-- Global site JS -->
+  <script defer src="../../script.js"></script>
+
+  <!-- Game JS -->
+  <script defer src="./molecule-builder.js"></script>
+</head>
+
+<body class="page-games">
+  <!-- header od spelling -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="../../index.html">
+        <span class="brand__mark">⚛︎</span>
+        <span class="brand__name">ХемијаЛаб</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="../../index.html">Почетна</a>
+<!--    <a href="quiz.html">Квизови</a> -->
+<!--    <a href="experiments.html">Експерименти</a> -->
+        <a href="../../games.html">Интерактивни игри</a>
+        <a href="../../contact.html">Контакт</a>
+      </nav>
+
+      <button class="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+
+    <div class="mobileNav" hidden>
+      <a href="../../index.html">Почетна</a>
+<!--    <a href="quiz.html">Квизови</a> -->
+<!--    <a href="experiments.html">Експерименти</a> -->
+      <a href="../../games.html">Интерактивни игри</a>
+      <a href="../../contact.html">Контакт</a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main molecule-builder-page">
+
+    <!-- PAGE TITLE -->
+    <h1 class="game-title">Градиме молекули</h1>
+    <p class="game-intro">
+      Повлечи атоми и поврзи ги за да изградиш точна молекула.
+    </p>
+
+      <!-- GAME LAYOUT -->
+      <div id="container">
+
+        <!-- SIDEBAR -->
+        <aside id="sidebar">
+
+          <!-- ATOM CARD -->
+          <section class="atom-card">
+            <h2 class="atom-card-title">Атоми</h2>
+        
+            <div id="atomPalette" class="atoms-palette"></div>
+          </section>
+        
+          <!-- BOND CONTROLS (next step) -->
+          <section class="bond-controls">
+            <h2>Поврзи ги атомите</h2>
+        
+            <button id="singleBondBtn">Единечна врска</button>
+            <button id="doubleBondBtn">Двојна врска</button>
+            <button id="tripleBondBtn">Тројна врска</button>
+        
+            <button id="checkBtn">Провери ја молекулата</button>
+            <button id="resetBtn">Почни од почеток</button>
+          </section>
+        
+        </aside>
+
+        <!-- WORKSPACE -->
+        <section id="workspace">
+          <p class="workspace-hint">Повлечи го атомот тука</p>
+        </section>
+
+      </div>
+      <div id="resultBar" class="result-bar" >
+        <p id="resultText"></p>
+        <button id="tryAgainBtn">Пробај повторно</button>
+      </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark">⚛︎</span>
+        <span class="brand__name">Хемија</span>
+      </div>
+      <div class="footer__links">
+        <a href="../../contact.html">Контакт</a>
+      </div>
+      <div class="footer__copy">© <span id="year"></span> Хемија</div>
+    </div>
+  </footer>
+</body>
+</html>

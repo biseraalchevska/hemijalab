@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="mk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Израмнување на хемиски равенки</title>
+
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../css/quiz.css">
+  <link rel="stylesheet" href="../../css/experiments.css">
+
+  <link rel="stylesheet" href="./balance-equations.css">
+
+  <script defer src="../../script.js"></script>
+  <script defer src="./balance-equations.js"></script>
+</head>
+
+<body class="page-games">
+
+  <!-- header od spelling -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="../../index.html">
+        <span class="brand__mark">⚛︎</span>
+        <span class="brand__name">ХемијаЛаб</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="../../index.html">Почетна</a>
+<!--    <a href="quiz.html">Квизови</a> -->
+<!--    <a href="experiments.html">Експерименти</a> -->
+        <a href="../../games.html">Интерактивни игри</a>
+        <a href="../../contact.html">Контакт</a>
+      </nav>
+
+      <button class="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+
+    <div class="mobileNav" hidden>
+      <a href="../../index.html">Почетна</a>
+<!--    <a href="quiz.html">Квизови</a> -->
+<!--    <a href="experiments.html">Експерименти</a> -->
+      <a href="../../games.html">Интерактивни игри</a>
+      <a href="../../contact.html">Контакт</a>
+    </div>
+  </header>
+
+  <main class="main balance-equations-page">
+
+    <h1 class="game-title">Израмнување на хемиски равенки</h1>
+    <p class="game-intro">
+      Израмни ја хемиската равенка со променување на коефициентите.
+    </p>
+  
+    <div id="container">
+  
+      <aside id="sidebar">
+        <section class="atom-card">
+          <h3 class="atom-card-title">Равенки</h3>
+          <ul id="reaction-list"></ul>
+
+          </section>
+
+          <section class="bond-controls">
+            <button class="balance-check-btn" id="checkBtn">
+              Провери ја равенката
+            </button>
+          </section>
+
+      </aside>
+  
+      <!-- main space -->
+      <section id="workspace" class="balance-workspace">
+
+        <div id="reaction-nav">
+          <button id="prevReaction">← Претходно</button>
+          <span id="reaction-label"></span>
+          <button id="nextReaction">Следно →</button>
+        </div>
+      
+        <div id="equation-bar"></div>
+      
+        <div id="molecule-area">
+          <div class="box">
+            <h3>Реактанти</h3>
+            <div id="reactants"></div>
+          </div>
+      
+          <div class="box">
+            <h3>Продукти</h3>
+            <div id="products"></div>
+          </div>
+        </div>
+      
+        <div id="scales"></div>      
+        <div id="feedback"></div>
+      
+      </section>
+      
+  </main>
+  
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <span>© 2026 Хемија</span>
+  </div>
+</footer>
+
+</body>
+</html>
+

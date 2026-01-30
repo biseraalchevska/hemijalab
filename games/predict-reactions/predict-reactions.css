@@ -1,0 +1,266 @@
+   /* done */
+   .page-games .predictor-game {
+    padding: 32px 0;
+  }
+  
+  .page-games .predictor-game .title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .page-games #layout {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .page-games #container {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 32px;
+  
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 24px;
+  }
+  
+  /* stranicno */
+  .page-games {
+    background-color: #f8fafc;
+  }
+  .page-games #sidebar {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 18px;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    box-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+  
+  .page-games #sidebar h2 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  
+  .page-games #reactionList {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .page-games .reaction-item {
+    padding: 10px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  
+    background: #f8fafc;
+    border: 1px solid transparent;
+  }
+  
+  .page-games .reaction-item:hover {
+    background: #eef2ff;
+  }
+  
+  .page-games .reaction-item.active {
+    background: #e9f0ff;
+    font-weight: 600;
+    border-color: #c7d2fe;
+  }
+  
+  /* kviz space */
+  
+  .page-games .predict-workspace {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 28px 32px;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    box-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+  
+  /*reakciajta*/
+  .page-games #reaction-area {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .page-games .reaction-row {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    position: relative;
+  }
+    
+  .page-games .predict-card {
+    width: 120px;
+    height: 120px;
+  
+    background: white;
+    border: 1px solid var(--border);
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .page-games .predict-card .formula {
+    font-size: 32px;
+    font-weight: 800;
+  }
+  
+  .page-games .predict-card .name {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .page-games .plus {
+    font-size: 36px;
+    font-weight: 700;
+  }
+    
+  .page-games .product-card {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* animacija */
+  .page-games .animate .reactant-a {
+    transform: translateX(80px);
+    opacity: 0;
+    transition: 1s ease;
+  }
+  
+  .page-games .animate .reactant-b {
+    transform: translateX(-80px);
+    opacity: 0;
+    transition: 1s ease;
+  }
+  
+  .page-games .animate .product-card {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+    transition: 1s ease;
+  }
+  
+  .page-games .no-reaction .reactant-a,
+  .page-games .no-reaction .reactant-b {
+    animation: shake 0.6s ease;
+  }
+  
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-6px); }
+    40% { transform: translateX(6px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
+    100% { transform: translateX(0); }
+  }
+  
+  /* prasanjata */
+  .page-games #quiz-area {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .page-games .predict-quiz {
+    display: none;
+  
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    padding: 20px;
+    max-width: 520px;
+    width: 100%;
+  
+    text-align: center;
+  }
+  
+  .page-games .predict-quiz.active {
+    display: block;
+  }
+  
+  .page-games .predict-quiz h3 {
+    margin-bottom: 16px;
+  }
+  
+  /* odgovorite */
+  .page-games .predict-answer {
+    padding: 10px 18px;
+    margin: 6px;
+    font-weight: 600;
+    border: 1px solid var(--border);
+    background: white;
+    cursor: pointer;
+  }
+  
+  .page-games .predict-answer:hover {
+    background: #eef2ff;
+  }
+  
+  .page-games .predict-answer.auto-selected {
+    background: #ecf8f1;
+    border-color: #3bb273;
+  }
+  
+  /* potvrdi */
+  .page-games #submitPrediction {
+    margin-top: 16px;
+    padding: 12px 20px;
+    font-weight: 700;
+    border: 2px solid #111827;
+    background: #f3f4f6;
+    cursor: pointer;
+  }
+  
+  .page-games #submitPrediction:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  /* rezultati */
+  .page-games #explanation,
+  .page-games #balanced,
+  .page-games #student-results {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 12px;
+    opacity: 100%;
+  }
+  
+  .page-games .show {
+    opacity: 1;
+  }
+  
+  /* pocni pak */
+  .page-games #restartBtn {
+    margin: 24px auto 0;
+    padding: 12px 24px;
+    font-weight: 700;
+    border: 2px solid #111827;
+    background: #f3f4f6;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 900px) {
+    .page-games #container {
+      grid-template-columns: 1fr;
+    }
+  
+    .page-games #sidebar {
+      order: 2;
+    }
+  }
