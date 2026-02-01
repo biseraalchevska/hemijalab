@@ -25,6 +25,32 @@ fetch("./data/quizzes.json")
   });
 
 
+  function updateGradeDividers() {
+    const sections = document.querySelectorAll(".grade-section");
+  
+    const visibleSections = [];
+  
+    sections.forEach(section => {
+      if (section.style.display !== "none") {
+        visibleSections.push(section);
+      }
+  
+      const divider = section.nextElementSibling;
+      if (divider && divider.classList.contains("grade-divider")) {
+        divider.style.display = "none";
+      }
+    });
+  
+    visibleSections.forEach((section, index) => {
+      const divider = section.nextElementSibling;
+      if (!divider || !divider.classList.contains("grade-divider")) return;
+  
+      if (index < visibleSections.length - 1) {
+        divider.style.display = "block";
+      }
+    });
+  }
+  
 // po odd
 function renderQuizzes(quizzes) {
   document.querySelectorAll(".grade-section").forEach(section => {
@@ -99,6 +125,7 @@ function setupSearch() {
 
     renderQuizzes(filtered);
     updateCounts(filtered);
+    updateGradeDividers();
   });
 }
 
@@ -127,6 +154,7 @@ function setupGradeTabs() {
 
       renderQuizzes(filtered);
       updateCounts(filtered);
+      updateGradeDividers();
     });
   });
 }
