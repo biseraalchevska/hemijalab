@@ -18,39 +18,94 @@
   <!-- header -->
   <header class="header">
     <div class="container header__inner">
-      <a class="brand" href="./index.html">
+      <a class="brand" href="#">
         <span class="brand__mark">⚛︎</span>
-        <span class="brand__name">Хемија</span>
+        <span class="brand__name">ХемијаЛаб</span>
       </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Почетна</a>
+        <a href="quiz.html">Квизови</a> 
+<!--    <a href="experiments.html">Експерименти</a> -->
+        <a href="games.html">Интерактивни игри</a>
+        <a href="contact.html">Контакт</a>
+      </nav>
+
+      <button class="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+
+    <div class="mobileNav" hidden>
+      <a href="index.html">Почетна</a>
+      <a href="quiz.html">Квизови</a> 
+<!--    <a href="experiments.html">Експерименти</a> -->
+      <a href="games.html">Интерактивни игри</a>
+      <a href="contact.html">Контакт</a>
     </div>
   </header>
 
-  <!-- main -->
   <main>
     <section class="section">
       <div class="container quiz-player">
-
+  
         <h1 id="quizTitle">Вчитување...</h1>
-
+  
         <div class="quiz-top-nav">
-          <button id="prevBtn" disabled>← Претходно</button>
           <span id="progress"></span>
-          <button id="nextBtn">Следно →</button>
         </div>
-
-        <div class="quiz-question" id="questionText"></div>
-
-        <div class="quiz-answers" id="answers"></div>
-
-        <div class="quiz-question-bar" id="questionBar"></div>
-
-        <div class="quiz-finish">
-            <button id="finishBtn" hidden>Заврши со квизот!</button>
+  
+        <div class="quiz-card">
+          <button id="prevBtn" disabled>&lt;</button>
+  
+          <div class="quiz-question" id="questionText"></div>
+          <div class="quiz-answers" id="answers"></div>
+  
+          <button id="nextBtn">&gt;</button>
         </div>
-
+  
+        <div class="quiz-progress">
+          <div id="questionBar"></div>
+  
+          <div class="quiz-finish">
+            <button id="finishBtn" disabled>Заврши со квизот!</button>
+          </div>
+        </div>
+  
       </div>
     </section>
-  </main>
+    <div class="modal-backdrop hidden" id="finishModal">
+      <div class="modal-card">
+        <h3>Сигурно?</h3>
+    
+        <p id="finishModalText">
+          Не се одговорени сите прашања!.<br>
+          Сигурно ли сакаш да го завршиш квизот?
+        </p>
+    
+        <div class="modal-actions">
+          <button class="btn-secondary" id="cancelFinish">Врати се назад</button>
+          <button class="btn-primary" id="confirmFinish">Заврши</button>
+        </div>
+      </div>
+    </div>
 
+  </main>
+  
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <span class="brand__mark">⚛︎</span>
+          <span class="brand__name">ХемијаЛаб</span>
+        </div>
+        <div class="footer__links">
+          <a href="#">Контакт</a>
+        </div>
+        <div class="footer__copy">© <span id="year"></span> АлчевЛабс</div>
+      </div>
+    </footer>
+  
+    <script src="script.js"></script>
+  
 </body>
 </html>

@@ -3,6 +3,11 @@ let quizData = null;
 let currentQuestionIndex = 0;
 let userAnswers = [];
 
+const finishModal = document.getElementById("finishModal");
+const finishModalText = document.getElementById("finishModalText");
+const cancelFinishBtn = document.getElementById("cancelFinish");
+const confirmFinishBtn = document.getElementById("confirmFinish");
+
 
 const params = new URLSearchParams(window.location.search);
 const quizId = params.get("id");
@@ -54,6 +59,7 @@ function renderQuestion() {
     button.classList.add("selected");
 
     renderQuestionBar();
+    updateFinishButtonState();
   };
 
   if (question.type === "multiple-choice") {
@@ -101,6 +107,13 @@ function renderQuestion() {
   renderQuestionBar();
 }
 
+function updateFinishButtonState() {
+  const finishBtn = document.getElementById("finishBtn");
+
+  const hasAnyAnswer = userAnswers.some(ans => ans !== undefined);
+
+  finishBtn.disabled = !hasAnyAnswer;
+}
 
 function updateNavButtons() {
   const prevBtn = document.getElementById("prevBtn");
@@ -112,7 +125,6 @@ function updateNavButtons() {
   prevBtn.disabled = currentQuestionIndex === 0;
 
   nextBtn.hidden = isLast;
-  finishBtn.hidden = !isLast;
 
   prevBtn.onclick = () => {
     if (currentQuestionIndex > 0) {
@@ -128,13 +140,42 @@ function updateNavButtons() {
     }
   };
 
-  finishBtn.onclick = finishQuiz;
+  finishBtn.onclick = () => {
+    const total = quizData.questions.length;
+    const answered = userAnswers.filter(a => a !== undefined).length;
+  
+    if (answered < total) {
+      finishModalText.innerHTML = `
+        Имате одговорено само ${answered} од ${total} прашања.<br>
+        Сигурно ли сакате да го завршите квизот?
+      `;
+      finishModal.classList.remove("hidden");
+    } else {
+      finishQuiz();
+    }
+  };
+  
+  // finishBtn.onclick = finishQuiz;
+  // finishBtn.onclick = () => {
+  //   const total = quizData.questions.length;
+  //   const answered = userAnswers.filter(a => a !== undefined).length;
+  
+  //   if (answered < total) {
+  //     const confirmFinish = confirm(
+  //       `Имате одговорено само ${answered} од ${total} прашања.\n\nСигурно ли сакате да го завршите квизот?`
+  //     );
+  
+  //     if (!confirmFinish) return;
+  //   }
+  
+  //   finishQuiz();
+  // };
 }
 
 
 function updateProgress() {
   document.getElementById("progress").textContent =
-    `Прашање број ${currentQuestionIndex + 1} од ${quizData.questions.length} прашања`;
+    `Прашање број ${currentQuestionIndex + 1} од ${quizData.questions.length}`;
 }
 
 
@@ -178,3 +219,17 @@ function finishQuiz() {
     window.location.href = "./quiz-results.html";
   }
   
+  cancelFinishBtn.onclick = () => {
+    finishModal.classList.add("hidden");
+  };
+  
+  confirmFinishBtn.onclick = () => {
+    finishModal.classList.add("hidden");
+    finishQuiz();
+  };
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") {
+      finishModal.classList.add("hidden");
+    }
+  });
+    
