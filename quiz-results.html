@@ -15,33 +15,97 @@
 
 <body class="page-quiz-results">
 
-  <!-- header -->
   <header class="header">
     <div class="container header__inner">
-      <a class="brand" href="./index.html">
+      <a class="brand" href="#">
         <span class="brand__mark">⚛︎</span>
-        <span class="brand__name">Хемија</span>
+        <span class="brand__name">ХемијаЛаб</span>
       </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Почетна</a>
+        <a href="quiz.html">Квизови</a> 
+<!--    <a href="experiments.html">Експерименти</a> -->
+        <a href="games.html">Интерактивни игри</a>
+        <a href="contact.html">Контакт</a>
+      </nav>
+
+      <button class="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+
+    <div class="mobileNav" hidden>
+      <a href="index.html">Почетна</a>
+      <a href="quiz.html">Квизови</a> 
+<!--    <a href="experiments.html">Експерименти</a> -->
+      <a href="games.html">Интерактивни игри</a>
+      <a href="contact.html">Контакт</a>
     </div>
   </header>
 
-  <!-- main -->
-  <main>
+  <main class="results-main">
     <section class="section">
       <div class="container quiz-results">
+        <div class="container quiz-results">
 
-        <h1 id="resultTitle">Резултати</h1>
-        <p id="resultScore"></p>
-
-        <div id="resultsList"></div>
-
-        <div class="quiz-results-actions">
-          <a href="./quiz.html" class="btn">Назад кон квизови</a>
+          <h1 id="resultTitle">Резултати</h1>
+        
+          <div class="results-summary" id="resultsSummary">
+          </div>
+        
+          <hr class="results-divider" />
+        
+          <div class="results-grid">
+        
+            <section class="results-card correct">
+              <h3 class="results-header">
+                <span class="icon">✓</span>
+                Точни одговори (<span id="correctCount">0</span>)
+                <span class="arrow">⌄</span>
+              </h3>
+            
+              <ul id="correctList" class="results-list "></ul>
+            </section>
+        
+            <section class="results-card incorrect">
+              <h3 class="results-header">
+                <span class="icon">✕</span>
+                Погрешни прашања (<span id="incorrectCount">0</span>)
+                <span class="arrow">⌄</span>
+              </h3>
+              <ul id="incorrectList" class="results-list "></ul>
+            </section>
+        
+            <section class="results-card unanswered">
+              <h3 class="results-header">
+                <span class="icon">○</span>
+                Неодговорени (<span id="unansweredCount">0</span>)
+                <span class="arrow">⌄</span>
+              </h3>
+              <ul id="unansweredList" class="results-list "></ul>
+            </section>
+        
+          </div>
+        
+          <div class="quiz-results-actions">
+            <button id="retryBtn" class="btn btn-primary">Назад кон истиот квиз</button>
+            <a href="./quiz.html" class="btn btn-secondary">Назад кон страната за квизови</a>
+          </div>
+        
         </div>
-
-      </div>
+              </div>
     </section>
   </main>
-
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark">⚛︎</span>
+        <span class="brand__name">Хемија</span>
+      </div>
+      <div class="footer__links">
+        <a href="contact.html">Контакт</a>
+      </div>
+      <div class="footer__copy">© <span id="year"></span> Хемија</div>
+    </div>
+  </footer>
 </body>
 </html>
