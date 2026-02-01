@@ -212,10 +212,7 @@ function finishQuiz() {
       answers: userAnswers
     };
   
-    // privremen storage
     sessionStorage.setItem("quizResults", JSON.stringify(resultData));
-  
-    // otvori results page
     window.location.href = "./quiz-results.html";
   }
   
