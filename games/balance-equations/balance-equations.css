@@ -15,7 +15,6 @@
     padding-bottom: 80px;
   }
 
-/* naslov */
   .page-games h1,
   .page-games .game-title {
     text-align: center;
@@ -49,9 +48,7 @@
     flex-direction: column;
     gap: 20px;
   }
-  
-  /* iskoristeno od drugiot css zatoa se takvi iminjata - ravenki ne atomi */
-  
+    
   .page-games #sidebar .atom-card {
     background: transparent;
     padding: 0;
@@ -86,9 +83,7 @@
     background: #e9f0ff;
     font-weight: 600;
   }
-  
-  /* isto - ova e za kopceto */
-  
+    
   .page-games #sidebar .bond-controls {
     margin-top: auto; 
     display: flex;
@@ -128,8 +123,6 @@
     transform: translateY(1px);
   }
 
-
-  /* single container on teh right */
   .page-games .balance-workspace {
     background: white;
     border-radius: 0;
@@ -141,9 +134,7 @@
     flex-direction: column;
     gap: 20px;
   }
-  
-  /* prethodno sledno */
-  
+    
   .page-games #reaction-nav {
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -171,9 +162,7 @@
     font-weight: 700;
     font-size: 16px;
   }
-  
-  /* bar za ravenki */
-  
+    
   .page-games #equation-bar {
     background: #f6f8fb;
     border-radius: 5px;
@@ -187,9 +176,7 @@
     font-weight: 700;
     margin: 0 6px;
   }
-  
-  /* koeficienti */
-  
+    
   .page-games .molecule-control {
     display: inline-flex;
     flex-direction: column;
@@ -214,9 +201,7 @@
     background: white;
     cursor: pointer;
   }
-  
-  /* reaktanti/produkti */
-  
+    
   .page-games #molecule-area {
     background: transparent;
     padding: 0;
@@ -235,9 +220,7 @@
     font-size: 15px;
     font-weight: 700;
   }
-  
-  /*  molekuli */
-  
+    
   .page-games .molecule {
     display: inline-flex;
     align-items: center;
@@ -247,8 +230,6 @@
     border-radius: 5px;
     border: 1px dashed rgba(10, 20, 30, 0.25);
   }
-  
-  /*  atomi  */
   
   .page-games .atom {
     width: 28px;
@@ -263,7 +244,6 @@
     border: 1px solid rgba(0,0,0,.25);
   }
   
-  
   .page-games .atom.H { background: #4aa3ff; }
   .page-games .atom.O { background: #ff6b6b; }
   .page-games .atom.C { background: #555; }
@@ -277,12 +257,6 @@
     width: 100%;
     margin-top: 24px;
   }
-  
-  /* .page-games .scale {
-    background: #f6f8fb;
-    border-radius: 14px;
-    border: 1px solid var(--border);
-  } */
 
   .page-games .scale {
     display: flex;
@@ -308,9 +282,7 @@
     border-color: #3bb273;
     background: #ecf8f1;
   }
-  
-  /* feedback */
-  
+    
   .page-games #feedback {
     margin-top: 16px;
     text-align: center;

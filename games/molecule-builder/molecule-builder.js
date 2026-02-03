@@ -1,6 +1,5 @@
 const ALLOWED_ATOMS = ["H", "C", "O", "N", "S", "Na"];
 
-// dodaj gi ovie vo json file da ne se vaka hardcoded
 const molecules = [
   {
     name: "вода",
@@ -108,7 +107,6 @@ const molecules = [
   }
 ];
 
-// elementite 
 let ELEMENTS = [];
 let elementMap = new Map();
 
@@ -157,7 +155,6 @@ function initGame() {
   const placedAtoms = [];
   const placedBonds = [];
 
-//atom
   function renderAtomPalette() {
     atomPalette.innerHTML = "";
 
@@ -185,7 +182,6 @@ function initGame() {
   renderAtomPalette();
 
 
-  //povleci 
   workspace.addEventListener("dragover", e => e.preventDefault());
 
   workspace.addEventListener("drop", e => {
@@ -219,7 +215,6 @@ function initGame() {
     resultText.textContent = "";
   }
 
-  //vrski
   function setBondType(type) {
     bondMode = true;
     bondFirstAtom = null;
@@ -308,8 +303,6 @@ function initGame() {
     placedBonds.forEach(updateBondLine);
   });
 
-
-  //kopcinja
   checkBtn.onclick = () => {
     const counts = {};
     placedAtoms.forEach(a => counts[a.type] = (counts[a.type] || 0) + 1);
@@ -339,7 +332,6 @@ function initGame() {
     resetGame();
     resetResultBar()};
 
-    //helpers
   function sameCounts(a, b) {
     const ka = Object.keys(a).sort();
     const kb = Object.keys(b).sort();
@@ -369,8 +361,6 @@ function initGame() {
     return sameCounts(req, placed);
   }
 
-
-//reset
   function resetGame() {
     placedAtoms.forEach(a => a.el.remove());
     placedBonds.forEach(b => b.lineEls.forEach(l => l.remove()));

@@ -1,5 +1,3 @@
-//done
-
 const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
@@ -41,11 +39,9 @@ const atomGeoO = new THREE.SphereGeometry(0.5, 32, 32);
 const atomGeoH = new THREE.SphereGeometry(0.25, 32, 32);
 const bondGeo  = new THREE.CylinderGeometry(0.07, 0.07, 1.3, 16);
 
-// Kislorod
 const oxygen = new THREE.Mesh(atomGeoO, atomMatO);
 molecule.add(oxygen);
 
-// Vodorod
 const h1 = new THREE.Mesh(atomGeoH, atomMatH);
 const h2 = new THREE.Mesh(atomGeoH, atomMatH);
 
@@ -54,7 +50,6 @@ h2.position.set(1, -0.6, 0);
 
 molecule.add(h1, h2);
 
-// vrskite
 function bondBetween(a, b) {
   const bond = new THREE.Mesh(bondGeo, bondMat);
   bond.position.copy(a.position).lerp(b.position, 0.5);
@@ -66,7 +61,6 @@ function bondBetween(a, b) {
 bondBetween(oxygen, h1);
 bondBetween(oxygen, h2);
 
-//pogolema molekula
 molecule.scale.set(1.5,1.5,1.5);
 
 function animate() {

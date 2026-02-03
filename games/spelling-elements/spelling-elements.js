@@ -1,4 +1,3 @@
-//done
 let ELEMENTS = [];
 let symbolMap = new Map();
 
@@ -30,7 +29,6 @@ const hintBtn = $("hintBtn");
 const statusEl = $("status");
 const resultEl = $("result"); 
 
-// pocetok na igrata
 let target = "";
 let idx = 0;                 
 let build = [];              
@@ -40,7 +38,6 @@ let selectedIndex = null;
 let hoverInsertIndex = null; 
 let dragging = null;         
 
-// helpers
 function normalizeWord(raw) {
   return String(raw || "").trim().toLowerCase().replace(/[^a-z]/g, "");
 }
@@ -56,7 +53,6 @@ function setResult(kind, msg) {
   resultEl.textContent = msg;
 }
 
-// dali moze zborot da se speluva bez jokers?
 function canFinishFrom(startIndex) {
   const memo = new Map();
   function dfs(i) {
@@ -275,7 +271,6 @@ function moveTile(fromIndex, toIndex) {
   updateUI();
 }
 
-// dodavanje i menuvanje 
 function addOrSwitch(symbol, insertIndex = null) {
   if (!target) {
     setResult("bad", "Пред да започнеш, избери збор и потврди го.");
@@ -466,7 +461,6 @@ function updateUI() {
   renderPreviewShift();
 }
 
-// perioden sistem 
 function wireJokerTile() {
   const jokerTile = $("jokerTile");
   if (!jokerTile) return;
@@ -524,16 +518,12 @@ function renderPeriodicTable() {
   
       tile.addEventListener("click", () => addOrSwitch(el.symbol, null));
 
-      //pred site elementi
       if (el.color) {
         tile.style.backgroundColor = el.color;
       
-        // if (isDark(el.color)) {
-        //   tile.style.color = "#fff";
-        // }
+ 
       }
   
-      // f elementi
       if ((el.number >= 57 && el.number <= 71) || (el.number >= 89 && el.number <= 103)) {
         const isLanthanide = el.number <= 71;
         const row = isLanthanide ? 1 : 2;
@@ -546,7 +536,6 @@ function renderPeriodicTable() {
         return;
       }
   
-      // main elementi
       if (el.group && el.period) {
         tile.style.gridColumn = el.group;
         tile.style.gridRow = el.period;
@@ -595,7 +584,6 @@ function enableBuildZoneDnD() {
   });
 }
 
-// potvrdi
 function lockWord() {
   const word = normalizeWord(wordInput ? wordInput.value : "");
   if (!word) {
@@ -689,14 +677,6 @@ function resetAll() {
   setResult("", "");
   updateUI();
 }
-
-// function isDark(hex) {
-//   const r = parseInt(hex.substr(1, 2), 16);
-//   const g = parseInt(hex.substr(3, 2), 16);
-//   const b = parseInt(hex.substr(5, 2), 16);
-//   return (r * 0.299 + g * 0.587 + b * 0.114) < 160;
-// }
-
 
 (async function init() {
   try {

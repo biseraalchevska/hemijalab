@@ -1,4 +1,3 @@
-//done for now but needs work 
 let quizData = null;
 let currentQuestionIndex = 0;
 let userAnswers = [];
@@ -17,7 +16,6 @@ if (!quizId) {
   throw new Error("Quiz ID missing in URL");
 }
 
-// кvizot od json
 fetch(`./data/quizzes/${quizId}.json`)
   .then(res => {
     if (!res.ok) throw new Error("Quiz JSON not found");
@@ -33,12 +31,10 @@ fetch(`./data/quizzes/${quizId}.json`)
     alert("Не може да се вчита квизот.");
   });
 
-// naslov
 function renderQuizHeader() {
   document.getElementById("quizTitle").textContent = quizData.topic;
 }
 
-// prasanje
 function renderQuestion() {
   const question = quizData.questions[currentQuestionIndex];
 
@@ -80,7 +76,6 @@ function renderQuestion() {
     });
   }
 
-  // true false
   if (question.type === "true-false") {
     [
       { label: "Точно", value: true },
@@ -155,21 +150,6 @@ function updateNavButtons() {
     }
   };
   
-  // finishBtn.onclick = finishQuiz;
-  // finishBtn.onclick = () => {
-  //   const total = quizData.questions.length;
-  //   const answered = userAnswers.filter(a => a !== undefined).length;
-  
-  //   if (answered < total) {
-  //     const confirmFinish = confirm(
-  //       `Имате одговорено само ${answered} од ${total} прашања.\n\nСигурно ли сакате да го завршите квизот?`
-  //     );
-  
-  //     if (!confirmFinish) return;
-  //   }
-  
-  //   finishQuiz();
-  // };
 }
 
 
@@ -205,7 +185,6 @@ function renderQuestionBar() {
   });
 }
 
-//zavrsi
 function finishQuiz() {
     const resultData = {
       quizId,

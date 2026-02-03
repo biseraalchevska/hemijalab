@@ -1,4 +1,3 @@
-/* done */
 :root{
   --bg:#0b1e34;
   --bg2:#071726;
@@ -44,7 +43,6 @@ img{max-width:100%;display:block}
   margin:0 auto;
 }
 
-/* header */
 .header{
   position: relative;
   background: rgba(6, 14, 26, 0.95);
@@ -114,7 +112,6 @@ img{max-width:100%;display:block}
   top: -2px;
 }
 
-/* kopce */
 .btn{
   min-width: 340px;
   justify-content: center;
@@ -142,7 +139,6 @@ img{max-width:100%;display:block}
 }
 .btn--ghost:hover{background: rgba(255,255,255,.14)}
 
-/*hero*/
 .hero{
   min-height: calc(105vh - 80px);
   position: relative;
@@ -221,17 +217,6 @@ img{max-width:100%;display:block}
   justify-content: center;
 }
 
-
-/* .mockup{
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 18px;
-  padding: 14px;
-  box-shadow: 0 30px 80px rgba(0,0,0,.35);
-} */
-
-/*hero molekula */
-
 .hero__molecule{
   width: 100%;
   height: auto;
@@ -243,8 +228,6 @@ img{max-width:100%;display:block}
 .hero__visual:hover .hero__molecule {
   transform: translateY(-6px) scale(1.02);
 }
-
-/* hero motion vrtenje*/
 
 @keyframes floatSlow {
   0%   { transform: translateY(0) rotate(0deg); }
@@ -282,10 +265,6 @@ img{max-width:100%;display:block}
   height: 100% !important;
   display: block;
 }
-
-
-/* sektions i cards */
-
 
 .section-header{
   font-size: large;
@@ -403,7 +382,6 @@ img{max-width:100%;display:block}
 .checklist{margin:12px 0 0; padding-left: 18px;}
 .checklist li{margin:10px 0}
 
-/* footer */
 .footer{
   background: #061425;
   color: rgba(255,255,255,.88);
@@ -419,7 +397,6 @@ img{max-width:100%;display:block}
 .footer__links{display:flex; gap:16px; opacity:.9}
 .footer__copy{opacity:.8}
 
-/* eden dva tri */
 .modal{position:fixed; inset:0; display:none; z-index:100;}
 .modal[aria-hidden="false"]{display:block;}
 .modal__backdrop{position:absolute; inset:0; background: rgba(0,0,0,.6);}
@@ -479,13 +456,10 @@ img{max-width:100%;display:block}
   }
 }
 
-/*trgni go ova od tuka ova e samo quick fix ama treba poseben css*/
-/*background za interaktivni igri main page*/
 .page-games {
   background: #f4f7fb;
 }
 
-/* ova e za contact page  */
 .page-contact {
   min-height: 100vh;
   display: flex;
@@ -497,7 +471,6 @@ img{max-width:100%;display:block}
   flex: 1;
 }
 
-/*na landing page clicable cards*/
 .card-link {
   display: contents;
   color: inherit;

@@ -1,7 +1,5 @@
-// done fix it later pls
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// mobile meni - smeni tuka da ne se otvara samo
 const burger = document.querySelector(".burger");
 const mobileNav = document.querySelector(".mobileNav");
 
@@ -11,12 +9,10 @@ burger?.addEventListener("click", () => {
   mobileNav.hidden = isOpen;
 });
 
-// video
 const modal = document.getElementById("videoModal");
 const openVideoBtn = document.getElementById("openVideo");
 const frame = document.getElementById("videoFrame");
 
-// youtube url
 const VIDEO_ID = "dQw4w9WgXcQ";
 const VIDEO_URL = `https://www.youtube.com/embed/${VIDEO_ID}`;
 
@@ -42,7 +38,6 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// za filter i search bar vo kvizovi
 const tabs = document.querySelectorAll(".tab[data-grade]");
 const gradeSections = document.querySelectorAll(".grade-section[data-grade-section]");
 const searchInput = document.getElementById("quizSearch");
@@ -94,9 +89,6 @@ if (tabs.length && gradeSections.length) {
 }
 
 
-
-
-// za filter i search bar vo eksperimenti
 const expTabs = document.querySelectorAll('.tab[data-filter]');
 const expSearch = document.getElementById('expSearch');
 const expCards = document.querySelectorAll('#expGrid .quiz-card');
@@ -133,7 +125,6 @@ expSearch?.addEventListener('input', () => {
 
 if (expTabs.length && expCards.length) setExpFilter('all');
 
-// za filter i search bar vo interaktivni igri
 const gameTabs = document.querySelectorAll('.tab[data-filter]');
 const gameSearch = document.getElementById('gameSearch');
 const gameGrid = document.getElementById('gamesGrid');

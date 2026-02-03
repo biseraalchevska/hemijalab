@@ -1,8 +1,6 @@
-//done sea za sea
 let allQuizzes = [];
 let activeGrade = "all";
 
-//data za kvizovite od json
 fetch("./data/quizzes.json")
   .then(res => {
     if (!res.ok) throw new Error("Failed to load quizzes.json");
@@ -51,7 +49,6 @@ fetch("./data/quizzes.json")
     });
   }
   
-// po odd
 function renderQuizzes(quizzes) {
   document.querySelectorAll(".grade-section").forEach(section => {
     const grid = section.querySelector(".quiz-grid");
@@ -68,11 +65,19 @@ function renderQuizzes(quizzes) {
     const grid = section.querySelector(".quiz-grid");
     if (!grid) return;
 
-    const card = document.createElement("a");
-    card.className = "quiz-card";
-    card.href = `take-quiz.html?id=${quiz.id}`;
+    const isLocked = quiz.locked === true;
 
-    // prebaruvanje
+    const card = document.createElement("a");
+    card.className = "quiz-card" + (isLocked ? " is-locked" : "");
+  
+    if (!isLocked) {
+      card.href = `take-quiz.html?id=${quiz.id}`;
+    } else {
+      card.setAttribute("aria-disabled", "true");
+      card.tabIndex = -1; 
+    }
+
+
     card.dataset.title = quiz.title.toLowerCase();
     card.dataset.tags = quiz.tags.join(" ").toLowerCase();
     card.dataset.grade = quiz.grade;
@@ -90,7 +95,6 @@ function renderQuizzes(quizzes) {
 }
 
 
-// kolku ima
 function updateCounts(quizzes) {
   [7, 8, 9].forEach(g => {
     const count = quizzes.filter(q => q.grade === g).length;
@@ -102,7 +106,6 @@ function updateCounts(quizzes) {
 }
 
 
-// prebaruvanje
 function setupSearch() {
   const searchInput = document.getElementById("quizSearch");
   if (!searchInput) return;
@@ -130,7 +133,6 @@ function setupSearch() {
 }
 
 
-// filter
 function setupGradeTabs() {
   const tabs = document.querySelectorAll(".grade-tabs .tab");
   if (!tabs.length) return;

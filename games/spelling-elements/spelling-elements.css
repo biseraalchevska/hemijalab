@@ -1,17 +1,13 @@
-/*done*/
 .page-games .spelling-elements .card{
   background: white;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
-
 .page-games .spelling-elements .card-header{
   display: flex;
   justify-content: space-between;
   gap: 14px;
 }
-
-
 .page-games .spelling-elements {
   --border: rgba(10,20,30,.12);
   --tile: #ffffff;
@@ -20,16 +16,12 @@
   --bad: rgba(255, 86, 86, 0.14);
 }
 
-/*naslov*/
 .page-title {
   text-align: center;
   margin: 24px 0 16px;
   font-size: 1.6rem;
   font-weight: 700;
 }
-
-
-/* perioden sistem  */
 
 .page-games .spelling-elements .pt-wrap {
   padding: 0 18px 12px;
@@ -89,7 +81,6 @@
   text-overflow: ellipsis;
 }
 
-/* joker */
 .page-games .spelling-elements .joker-tile {
   grid-column: 1;
   grid-row: 2;
@@ -100,7 +91,6 @@
   );
   border: 1px solid rgba(120, 180, 255, 0.45);
 }
-
 
 .page-games .spelling-elements .target {
   margin-top: 16px;
@@ -176,7 +166,6 @@
   margin-left: 4px; 
 }
 
-/* rezultati */
 .page-games .spelling-elements .result {
   margin-top: 14px;
   padding: 12px;
@@ -192,8 +181,6 @@
   background: var(--bad);
 }
 
-
-/*igrata*/
 .page-games .spellinggame.card {
   transition: box-shadow .18s ease, border-color .18s ease;
 }

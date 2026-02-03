@@ -8,7 +8,6 @@ fetch("../../data/elements.json")
     });
   });
 
-//trgni gi ovie od tuka stavi gi vo json
 const reactions = [
   {
     id: "water",

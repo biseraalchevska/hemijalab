@@ -46,8 +46,10 @@ function renderResults(quizData, userAnswers) {
   quizData.questions.forEach((q, index) => {
     const userAnswer = userAnswers[index];
 
-    if (userAnswer === undefined) {
+    if (userAnswer === null) {
       unanswered.push({ q, index });
+    }else if (userAnswer === undefined) {
+      unanswered.push({ q, index});
     } else if (userAnswer === q.correctAnswer) {
       correct.push({ q, index });
     } else {
@@ -143,7 +145,7 @@ function setupCollapsibleCards() {
 function formatAnswer(value) {
   if (value === true) return "Точно";
   if (value === false) return "Погрешно";
-  if (value === undefined) return "Не е одговорено";
+  if (value === null || value === undefined) return "Не е одговорено";
   return value;
 }
 
